@@ -1,0 +1,559 @@
+
+/* ----------------------------------------------- */
+/*                BASIC SETUP                      */
+/* ----------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: rgb(245, 245, 245);
+    color      : rgb(82, 78, 78);
+    font-family: 'Lato',sans-serif ;
+    font-weight: 300;
+    font-size  :  20px;
+    text-rendering : optimizeLegibility;
+}
+
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+  /* ------------------------------- */
+  /*        REUSABLE COMPONENTS      */
+  /* ------------------------------- */
+
+.row{
+     max-width: 1140px;
+     margin: 0 auto 0 auto;
+     /* margin: top right bottom left*/
+}
+
+section{
+    padding: 80px 0;
+}
+
+.box{
+    /* padding: 1%; */
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+  /* ------------------------------- */
+  /*             HEADINGS            */
+  /* ------------------------------- */
+
+#m,h2,h3{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#m{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white; 
+    font-size: 240%;
+    word-spacing: 2px;
+}
+
+
+
+h2{
+    font-size: 180%;
+    text-align: center;
+    word-spacing: 2px; 
+    margin-bottom: 20px; 
+}
+
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: orange;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px; 
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+  /* ------------------------------- */
+  /*             PARAGRAPH           */
+  /* ------------------------------- */
+.copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.section-meals ,.copy{
+    margin-bottom: 40px;
+}
+  /* ------------------------------- */
+  /*             ICONS                */
+  /* ------------------------------- */
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: orange;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+}
+  /* ------------------------------- */
+  /*              BUTTONS            */
+  /* ------------------------------- */
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    font-weight: 300;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: orange;
+    border: 1px solid orange;
+    margin-right: 15px;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid orange;
+    color: orange;
+}
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: rgb(192, 128, 9);
+    color :white;
+}
+  /* ------------------------------- */
+  /*             HEADER              */
+  /* ------------------------------- */
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.699),rgba(0, 0, 0, 0.699)) , url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    /* left: 10%;
+    as in video */
+    left: 50%;
+    transform:translate(-50% ,-50%);
+   
+}
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    list-style: none;
+    float: right;
+    margin-top: 55px;
+}
+
+.main-nav li,a:link,
+.main-nav li,a:visited{
+    padding: 8px 0;
+    /* top,buttom left,right */
+    display: inline-block;
+    margin-left: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-bottom: 2px transparent;
+    transition: border-bottom 0.2s;
+}
+.main-nav a:hover,
+.main-nav a:active{
+    border-bottom: 2px orange solid;
+}
+  /* ------------------------------- */
+  /*             MEALS              */
+  /* ------------------------------- */
+
+.section-meals{
+    list-style: none;
+    width: 100%; 
+    padding: 0;   
+}
+
+.section-meals li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black; 
+}
+
+.meal-photo img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: tansform 0.5s opacity 0.5s;
+    opacity: 0.7;
+}
+
+.meal-photo img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+
+  /* ------------------------------- */
+  /*          HOW IT WORKS           */
+  /* ------------------------------- */
+
+
+  .section-steps {
+    background-color: #f4f4f4;
+}
+
+/* .step-box:first-child {
+      text-align: right;
+      padding-right: 3%; 
+
+  }
+
+.step-box:last-child {
+    padding-left: 3%; 
+
+    as in video
+} */
+.step-box figure{
+    text-align: right;
+    padding-right: 9%;
+    margin-top: 30px;
+}
+
+.last{
+    margin-top: 70px;
+}
+
+
+.app-screen{
+    width: 40%; 
+}
+
+
+.works-steps{
+    margin-bottom: 50px;
+}
+
+.works-steps:last-of-type{
+    margin-bottom: 80px;
+}
+
+.works-steps div{
+    color: orange;
+    border: 2px solid orange;
+    display: inline;
+    border-radius:50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+
+ /* ------------------------------- */
+  /*          CITIES                 */
+  /* ------------------------------- */ 
+
+  .section-cities{
+      background-color: #fff;
+  }
+
+  .cities img{
+      width: 100%;
+      margin-bottom: 15px;
+
+  }
+
+  .cities i{
+      color: orange;
+      font-size: 20px;
+      margin-right: 5px;
+  }
+
+  .cities a:link,
+  .cities a:visited{
+    color: orange;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid ;
+  }
+
+  .cities a:hover,
+  .cities a:active{
+    color: gray;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid transparent;
+}
+
+
+ /*------------------------------- */
+ /*          TESTIMONIALS          */
+ /* -------------------------------*/ 
+.section-testimonials{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.699),rgba(0, 0, 0, 0.699)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+
+cite img{
+    border-radius: 50%;
+    height: auto;
+    width: 50px;
+    margin-right:10px; 
+    vertical-align: middle;
+
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+blockquote{
+    padding: 2px;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote::before{
+    content: "\201C";
+    font-size: 80px;
+    display: block;
+    position: absolute;
+    top:-5px;
+    left: -5px;
+}
+
+ /*------------------------------- */
+ /*          PLANS                 */
+ /* -------------------------------*/ 
+
+.section-plans{
+    background-color: #f4f4f4;
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5px;
+    box-shadow: 0 2px 2px #efefef;
+            /* x-axsis y-axsis color*/
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid rgba(219, 219, 219, 0.897);
+}
+
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+   }
+.plan-box div:last-child{
+ text-align: center;
+ border: 0;
+}
+.plan-box a{
+    margin: 0 !important;
+   }
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: orange;
+}
+
+.plan-price-per-meal{
+    font-size: 80%;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+
+ .plan-box ul li{
+    list-style: none; 
+}
+
+
+ /*------------------------------- */
+ /*          FORMS                 */
+ /* -------------------------------*/ 
+
+.section-form{
+    background-color: #fff;
+}
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid grey; 
+}
+textarea{
+    height: 100px ;
+}
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{
+    outline: none;
+}
+
+ /*------------------------------- */
+ /*          FOOTER                */
+ /* -------------------------------*/ 
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    /* margin-right: 20px; */
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
